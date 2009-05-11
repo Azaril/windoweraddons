@@ -1,5 +1,5 @@
-require("utility");
-require("gameutility");
+require("common\\utility");
+require("common\\gameutility");
 
 -- Command handler.
 function Cancel_OnCommand(CommandData)

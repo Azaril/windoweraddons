@@ -1,5 +1,5 @@
-require("utility");
-require("ui");
+require("common\\utility");
+require("common\\ui");
 
 -- Visiblity of the console.
 Console_Showing = false;

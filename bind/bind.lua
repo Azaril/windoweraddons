@@ -1,4 +1,4 @@
-require("utility");
+require("common\\utility");
 
 Bind_KeyDownMap = {};
 Bind_KeyUpMap = {};

@@ -1,5 +1,7 @@
-require("utility")
-require("gameutility")
+require("common\\utility")
+require("common\\gameutility")
+require("spellcast\\namespace")
+require("spellcast\\event")
 
 function SCIsEventType(Event, EventType)
 
@@ -67,24 +69,24 @@ end
 
 function SCIsIdle(Event)
 
-    return SCIsEventType(Event, SC.Event.Idle);
+    return SCIsEventType(Event, SC.EventType.Idle);
 
 end
 
 function SCIsJobAbility(Event)
 
-    return SCIsEventType(Event, SC.Event.JobAbility);
+    return SCIsEventType(Event, SC.EventType.JobAbility);
 
 end
 
 function SCIsMagicAbility(Event)
 
-    return SCIsEventType(Event, SC.Event.MagicAbility);
+    return SCIsEventType(Event, SC.EventType.MagicAbility);
 
 end
 
 function SCIsWeaponSkill(Event)
 
-    return SCIsEventType(Event, SC.Event.WeaponSkill);
+    return SCIsEventType(Event, SC.EventType.WeaponSkill);
 
 end

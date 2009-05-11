@@ -6,19 +6,19 @@ package.path = string.format("%s\\addons\\?.lua", CFFXiHook.Instance():GetHookDi
 --
 
 -- Load utility script.
-require("utility");
+require("common\\utility");
+
+-- Load game utility script.
+require("common\\gameutility");
 
 -- Load ui script.
-require("ui");
+require("common\\ui");
 
 -- Load console script.
-require("console");
+require("console\\console");
 
 -- Load alias script.
-require("alias");
+require("alias\\alias");
 
 -- Load bind script.
-require("bind");
-
--- Load game utilitiy script.
-require("gameutility");
+require("bind\\bind");

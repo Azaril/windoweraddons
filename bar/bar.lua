@@ -1,5 +1,5 @@
-require("utility");
-require("ui");
+require("common\\utility");
+require("common\\ui");
 
 BarAlignment_Left = 0;
 BarAlignment_Right = 1;

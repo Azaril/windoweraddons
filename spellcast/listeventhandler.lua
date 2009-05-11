@@ -1,6 +1,7 @@
-require("utility")
-require("gameutility")
-require("spellcast\\namespace");
+require("common\\utility")
+require("common\\gameutility")
+require("spellcast\\namespace")
+require("spellcast\\eventhandler")
 
 class 'SCListEventHandler' (SCEventHandler)
 
@@ -45,3 +46,8 @@ function SCListEventHandler:HandleEvent(Event)
     return Handled;
 
 end
+
+--
+-- Add to namespace.
+--
+SC.List = SCListEventHandler;

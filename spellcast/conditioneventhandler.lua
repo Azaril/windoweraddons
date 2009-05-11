@@ -1,7 +1,7 @@
-require("utility")
-require("gameutility")
-
---require("spellcast\\listeventhandler");
+require("common\\utility")
+require("common\\gameutility")
+require("spellcast\\namespace");
+require("spellcast\\listeventhandler");
 
 class 'SCConditionEventHandler' (SCListEventHandler)
 
@@ -24,3 +24,8 @@ function SCConditionEventHandler:HandleEvent(Event)
     return false;
 
 end
+
+--
+-- Add to namespace.
+--
+SC.Condition = SCConditionEventHandler;

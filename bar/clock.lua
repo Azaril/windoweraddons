@@ -1,5 +1,5 @@
-require("utility");
-require("ui");
+require("common\\utility");
+require("common\\ui");
 require("bar\\baraddon");
 
 class 'ClockAddon' (BarAddon)

@@ -1,8 +1,6 @@
-require("utility")
-require("gameutility")
-require("spellcast\\namespace");
+require("spellcast\\namespace")
 
-SC.Event =
+SC.EventType =
 {
     Idle =          0,
     JobAbility =    1,

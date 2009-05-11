@@ -1,4 +1,4 @@
-require("utility");
+require("common\\utility");
 
 -- Load the UI scheme file.
 CEGUI.SchemeManager:getSingleton():loadScheme("Windower.scheme");

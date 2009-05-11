@@ -1,7 +1,7 @@
-require("utility")
-require("gameutility")
-
---require("spellcast\\eventhandler");
+require("common\\utility")
+require("common\\gameutility")
+require("spellcast\\namespace")
+require("spellcast\\eventhandler");
 
 class 'SCTraceEventHandler' (SCEventHandler)
 
@@ -38,3 +38,8 @@ function SCTraceEventHandler:HandleEvent(Event)
     return false;
 
 end
+
+--
+-- Add to namespace.
+--
+SC.Trace = SCTraceEventHandler;

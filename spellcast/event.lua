@@ -1,5 +1,6 @@
-require("utility")
-require("gameutility")
+require("common\\utility")
+require("common\\gameutility")
+require("spellcast\\namespace")
 
 class 'SCEvent'
 
@@ -48,3 +49,8 @@ function SCEvent:GetContext()
     return self.Context;
 
 end
+
+--
+-- Add to namespace.
+--
+SC.Event = SCEvent;

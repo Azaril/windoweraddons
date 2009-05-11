@@ -11,10 +11,10 @@ BindKeyDownPreUI(Key.Insert, nil, Console_Toggle);
 --
 
 -- Load cancel script.
-require("cancel");
+require("cancel\\cancel");
 
 -- Load call for help script.
-require("callforhelp");
+require("callforhelp\\callforhelp");
 
 --
 -- Bar setup

@@ -1,24 +1,26 @@
-require("utility")
-require("gameutility")
-require("spellcast\\namespace");
+require("common\\utility")
+require("common\\gameutility")
+require("spellcast\\namespace")
+require("spellcast\\event")
+require("spellcast\\eventtype")
                    
-function SC:DumpEvent(Event)
+SC.DumpEvent = function(Event)
 
     local EventType = Event:GetType();
 
-    if (EventType == SC.Event.Idle) then
+    if (EventType == SC.EventType.Idle) then
         return "Idle event";
     end
     
-    if (EventType == SC.Event.JobAbility) then
+    if (EventType == SC.EventType.JobAbility) then
         return "Job ability event - " .. tostring(Event:GetArguments().Action);
     end
     
-    if (EventType == SC.Event.MagicAbility) then
+    if (EventType == SC.EventType.MagicAbility) then
         return "Magic ability event - " .. tostring(Event:GetArguments().Action);
     end
     
-    if (EventType == SC.Event.WeaponSkill) then
+    if (EventType == SC.EventType.WeaponSkill) then
         return "Weapon skill event - " .. tostring(Event:GetArguments().Action);
     end
 

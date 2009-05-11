@@ -1,7 +1,7 @@
-require("utility")
-require("gameutility")
-
---require("spellcast\\eventhandler");
+require("common\\utility")
+require("common\\gameutility")
+require("spellcast\\namespace");
+require("spellcast\\eventhandler");
 
 class 'SCEquipEventHandler' (SCEventHandler)
 
@@ -54,3 +54,8 @@ function SCEquipEventHandler:EquipItem(Slot, Item)
     SendInput("/equip " .. Slot .. " \"" .. Item .. "\"");
 
 end
+
+--
+-- Add to namespace.
+--
+SC.Equip = SCEquipEventHandler;

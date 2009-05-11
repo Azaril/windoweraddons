@@ -1,5 +1,6 @@
-require("utility")
-require("gameutility")
+require("common\\utility")
+require("common\\gameutility")
+require("spellcast\\namespace")
 
 class 'SCSet'
 
@@ -34,3 +35,8 @@ function SCSet:GetItems()
     return self.Items;
 
 end
+
+--
+-- Add to namespace.
+--
+SC.Set = SCSet;

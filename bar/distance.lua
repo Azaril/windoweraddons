@@ -1,6 +1,6 @@
-require("utility");
-require("gameutility");
-require("ui");
+require("common\\utility");
+require("common\\gameutility");
+require("common\\ui");
 require("bar\\baraddon");
 
 class 'DistanceAddon' (BarAddon)
