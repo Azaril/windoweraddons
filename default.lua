@@ -54,42 +54,6 @@ function Default_OnCommand(CommandData)
 	-- Get the command string.
 	local Command = CommandData:GetCommand();
 	
-	Log(Command);
-	
-	if(Command:lower() == "sc") then
-	
-	    Log("Loading spellcast...");
-	
-	    if(Default_SC ~= nil) then
-	    
-	        Default_SC:Stop();
-	        Default_SC = nil;
-	        	        
-	    end
-	    
-	    RunScriptFile(GetScriptFilePath("spellcast\\namespace.lua"));
-	    RunScriptFile(GetScriptFilePath("spellcast\\util.lua"));
-        RunScriptFile(GetScriptFilePath("spellcast\\set.lua"));
-        RunScriptFile(GetScriptFilePath("spellcast\\eventtype.lua"));
-        RunScriptFile(GetScriptFilePath("spellcast\\event.lua"));
-        RunScriptFile(GetScriptFilePath("spellcast\\eventhandler.lua"));
-        RunScriptFile(GetScriptFilePath("spellcast\\eventtest.lua"));        
-        RunScriptFile(GetScriptFilePath("spellcast\\singlechildeventhandler.lua"));
-        RunScriptFile(GetScriptFilePath("spellcast\\listeventhandler.lua"));
-        RunScriptFile(GetScriptFilePath("spellcast\\conditioneventhandler.lua"));        
-        RunScriptFile(GetScriptFilePath("spellcast\\traceeventhandler.lua"));
-        RunScriptFile(GetScriptFilePath("spellcast\\equipeventhandler.lua"));        
-        RunScriptFile(GetScriptFilePath("spellcast\\spellcast.lua"));
-        
-        Default_SC = Spellcast();
-        Default_SC:Start();
-        
-        Log("Finished loading spellcast.");
-        
-        return true;	    
-	
-	end
-	
 	return false;
 
 end

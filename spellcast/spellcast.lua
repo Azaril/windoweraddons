@@ -62,45 +62,6 @@ SC.IsWeaponSkill =
     function(Children)
         return SCConditionEventHandler(SCIsWeaponSkill, Children);
     end    
-
---
--- Test code
--- 
-
-local IdleSet = SC.Set({
-                        Main="IdleMain",
-                        Sub="IdleSub",
-                        Range="IdleRange",
-                        Ammo="IdleAmmo",
-                        Head="IdleHead",
-                        Neck="IdleNeck",
-                        LeftEar="IdleLeftEar",
-                        RightEar="IdleRightEar",
-                        Body="IdleBody",
-                        Hands="IdleHands",
-                        LeftRing="IdleLeftRight",
-                        RightRing="IdleRightRing",
-                        Back="IdleBack",
-                        Waist="IdleWaist",
-                        Legs="IdleLegs",
-                        Feet="IdleFeet"
-                    });
-                    
-local CureSet = SC.Set({
-                        Main="CureMain"
-                    });
-                    
-local TestSet1 = SC.Set({
-    Range = "Bamboo Fish. Rod"
-});
-
-local TestSet2 = SC.Set({
-    Range = "Yew Fishing Rod"
-});
-
-local TestSet3 = SC.Set({
-    Range = "TestSet3"
-});
                     
 function DumpEvent(Event)
 
@@ -133,34 +94,6 @@ function Spellcast:__init()
     self.IdleTimer = CTimer();
     self.IdleTimerOnTickConnection = self.IdleTimer:GetOnTick():Connect(self.OnIdleTimerTick, self);
 
---
--- TEST CODE
---
-
-    local Handlers = SC.List({
-                                SC.Trace(DumpEvent),
-                                
-                                SC.IsMagicAbility(
-                                {
-                                    SC.IsAction("Cure II",
-                                    {
-                                        SC.Equip(TestSet2)
-                                    }),
-                                    
-                                    SC.IsAction("Cure",
-                                    {
-                                        SC.Equip(TestSet3)
-                                    })
-                                }),
-                                
-                                SC.IsIdle(
-                                {
-                                    SC.Equip(TestSet1)
-                                }),
-                            });
-    
-    self.Handler = Handlers;
-
 end
 
 function Spellcast:__finalize()
@@ -169,7 +102,7 @@ end
 
 function Spellcast:Start()
 
-    Log("Start");
+    Log("Starting spellcast");
 
     self.ChatInputConnection = CFFXiHook.Instance():GetGameHooks():GetOnInput():Connect(self.OnChatInput, self);
     
@@ -179,7 +112,7 @@ end
 
 function Spellcast:Stop()
 
-    Log("Stop");
+    Log("Stopping spellcast");
     
     self:DisableIdleTimer();
 
@@ -234,16 +167,12 @@ function Spellcast:ParseGameCommand(Text)
     -- Check this is actually a command.
     if(#InputText >= 1 and string.sub(InputText, 1, 1) ~= "/") then
         
-        Log("Not a command");
-        
         return nil;
         
     end
         
     -- Ignore console commands.
     if(#InputText >= 2 and string.sub(InputText, 2, 2) == "/") then
-    
-        Log("Console command");
     
         return nil;
     
@@ -253,8 +182,6 @@ function Spellcast:ParseGameCommand(Text)
     
     -- Check a command was found.
     if(CommandText == nil) then
-    
-        Log("Failed to find command");
     
         return nil;
     
@@ -266,8 +193,6 @@ function Spellcast:ParseGameCommand(Text)
     
     if(SingleActionIndex == nil and QuotedActionIndex == nil) then
     
-        Log("Failed to find action");
-        
         return nil;
     
     end
@@ -299,8 +224,6 @@ end
 
 function Spellcast:CommandToActionType(NormalizedCommand)
 
-    Log("Normalized command: " .. NormalizedCommand);
-
     if(NormalizedCommand == "ja") then
         return SC.Event.JobAbility;
     elseif(NormalizedCommand == "ma") then
@@ -314,8 +237,6 @@ function Spellcast:CommandToActionType(NormalizedCommand)
 end
 
 function Spellcast:OnChatInput(Input)
-
-    Log("Chat input: " .. tostring(Input));
 
     local Cancel = false;
     
