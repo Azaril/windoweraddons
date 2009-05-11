@@ -45,7 +45,7 @@ end
 
 -- Get script directory.
 function GetScriptDirectory()
-	return string.format("%s\\%s", CFFXiHook.Instance():GetHookDirectory(), "lua_Scripts");
+	return string.format("%s\\%s", CFFXiHook.Instance():GetHookDirectory(), "addons");
 end
 
 -- Get script file path.

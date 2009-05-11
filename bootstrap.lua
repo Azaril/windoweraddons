@@ -1,5 +1,5 @@
 -- Set lua script file search path.
-package.path = string.format("%s\\lua_scripts\\?.lua", CFFXiHook.Instance():GetHookDirectory());
+package.path = string.format("%s\\addons\\?.lua", CFFXiHook.Instance():GetHookDirectory());
 
 --
 -- Initialization
