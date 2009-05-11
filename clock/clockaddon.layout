@@ -1,0 +1,10 @@
+<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="Windower/StaticText">
+    <Property Name="HorzFormatting" Value="HorzCentred" />
+    <Property Name="VertFormatting" Value="VertCentred" />
+    <Property Name="UnifiedSize" Value="{{0,100},{1,0}}" />
+    <Property Name="Text" Value="Clock" />
+    <Property Name="InheritsAlpha" Value="False" />
+  </Window>
+</GUILayout>

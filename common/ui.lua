@@ -99,6 +99,12 @@ function RemoveTopWindow(Window)
 
 end
 
+function AddResourceGroupDirectory(ResourceGroup, Directory)
+
+    CFFXiHook.Instance():GetUIManager():AddResourceGroupDirectory(ResourceGroup, Directory);
+
+end
+
 -- Title used for the game window.
 UI_NormalTitle = "FINAL FANTASY XI";
 

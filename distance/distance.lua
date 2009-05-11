@@ -1,7 +1,13 @@
 require("common\\utility");
 require("common\\gameutility");
 require("common\\ui");
-require("bar\\baraddon");
+
+require("bar\\bar");
+
+--
+-- Register distance resource folder.
+--
+AddResourceGroupDirectory("DistanceResources", GetAddonDirectoryPath("distance"));
 
 class 'DistanceAddon' (BarAddon)
 
@@ -22,7 +28,7 @@ end
 
 function DistanceAddon:Load()
     
-	self.UIRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("DistanceAddon.layout", false);
+	self.UIRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("distanceaddon.layout", "", "DistanceResources");
 	
 	-- Trigger an immediate update.
 	self:OnUpdateTimerTick();

@@ -1,7 +1,13 @@
 require("common\\utility");
 require("common\\gameutility");
 require("common\\ui");
-require("bar\\baraddon");
+
+require("bar\\bar");
+
+--
+-- Register position resource folder.
+--
+AddResourceGroupDirectory("PositionResources", GetAddonDirectoryPath("position"));
 
 class 'PositionAddon' (BarAddon)
 
@@ -22,7 +28,7 @@ end
 
 function PositionAddon:Load()
     
-	self.UIRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("PositionAddon.layout", false);
+	self.UIRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("PositionAddon.layout", "", "PositionResources");
 	
 	-- Trigger an immediate update.
 	self:OnUpdateTimerTick();

@@ -43,14 +43,22 @@ function GetHookDirectory()
 	return CFFXiHook.Instance():GetHookDirectory();
 end
 
--- Get script directory.
-function GetScriptDirectory()
+-- Get addon directory.
+function GetAddonDirectory()
 	return string.format("%s\\%s", CFFXiHook.Instance():GetHookDirectory(), "addons");
 end
 
--- Get script file path.
-function GetScriptFilePath(File)
-	return string.format("%s\\%s", GetScriptDirectory(), File);
+-- Get addon file path.
+function GetAddonFilePath(File)
+	return string.format("%s\\%s", GetAddonDirectory(), File);
+end
+
+-- Get addon directory path.
+function GetAddonDirectoryPath(Directory)
+    if(Directory:sub(-1) ~= "\\") then
+        Directory = Directory .. "\\";
+    end
+    return GetAddonFilePath(Directory);
 end
 
 -- Run a script file.

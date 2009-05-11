@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="Windower/FrameWindow" Name="Console">
+    <Property Name="AlwaysOnTop" Value="True" />
+    <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+    <Property Name="UnifiedSize" Value="{{1,0},{0,200}}" />
+    <Property Name="FrameEnabled" Value="False" />
+    <Property Name="TitlebarEnabled" Value="False" />
+    <Property Name="RollUpEnabled" Value="False" />
+    <Property Name="DragMovingEnabled" Value="False"/>
+    <Property Name="CloseButtonEnabled" Value="False" />
+    <Property Name="SizingEnabled" Value="False" />
+    <Property Name="InheritsAlpha" Value="False" />
+    <Property Name="Alpha" Value="0.7" />
+
+    <Window Type="Windower/Listbox" Name="Console/HistoryList" >
+      <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+      <Property Name="UnifiedPosition" Value="{{0,7},{0,5}}" />
+      <Property Name="UnifiedSize" Value="{{1,-14},{1,-40}}" />
+    </Window>
+
+    <Window Type="Windower/Editbox" Name="Console/Editbox">
+      <Property Name="ID" Value="2" />
+      <Property Name="VerticalAlignment" Value="Bottom" />
+      <Property Name="UnifiedMaxSize" Value="{{1,0},{1,0}}" />
+      <Property Name="UnifiedPosition" Value="{{0,7},{0,-7}}" />
+      <Property Name="UnifiedSize" Value="{{1,-14},{0,30}}" />
+      <Property Name="Text" Value="" />
+    </Window>
+
+  </Window>
+</GUILayout>

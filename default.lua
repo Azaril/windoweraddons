@@ -22,11 +22,10 @@ require("callforhelp\\callforhelp");
 
 -- Load the bar scripts.
 require("bar\\bar");
-require("bar\\baraddon");
-require("bar\\clock");
-require("bar\\distance");
-require("bar\\position");
-require("bar\\inventory");
+require("clock\\clock");
+require("distance\\distance");
+require("position\\position");
+require("inventory\\inventory");
 
 -- Create the top bar.
 TopBar = AddonBar();

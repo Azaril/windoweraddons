@@ -1,6 +1,11 @@
 require("common\\utility");
 require("common\\ui");
 
+--
+-- Register console resource folder.
+--
+AddResourceGroupDirectory("ConsoleResources", GetAddonDirectoryPath("console"));
+
 -- Visiblity of the console.
 Console_Showing = false;
 
@@ -330,7 +335,7 @@ function Console_OnInitializeScript()
 	Log("Initializing console script...");
 
 	-- Create single instance of console window.
-	Console_Root = CEGUI.WindowManager:getSingleton():loadWindowLayout("Console.layout", false);
+	Console_Root = CEGUI.WindowManager:getSingleton():loadWindowLayout("Console.layout", "", "ConsoleResources");
 
 	-- Get the input window for the console.
 	Console_Input = Console_Root:getChild("Console/Editbox"):toEditbox();

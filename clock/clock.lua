@@ -1,6 +1,12 @@
 require("common\\utility");
 require("common\\ui");
-require("bar\\baraddon");
+
+require("bar\\bar");
+
+--
+-- Register clock resource folder.
+--
+AddResourceGroupDirectory("ClockResources", GetAddonDirectoryPath("clock"));
 
 class 'ClockAddon' (BarAddon)
 
@@ -21,7 +27,7 @@ end
 
 function ClockAddon:Load()
     
-	self.UIRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("ClockAddon.layout", false);
+	self.UIRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("clockaddon.layout", "", "ClockResources");
 	
 	-- Trigger an immediate update.
 	self:OnUpdateTimerTick();

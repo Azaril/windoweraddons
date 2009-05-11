@@ -1,6 +1,12 @@
 require("common\\utility");
 require("common\\ui");
-require("bar\\baraddon");
+
+require("bar\\bar");
+
+--
+-- Register inventory resource folder.
+--
+AddResourceGroupDirectory("InventoryResources", GetAddonDirectoryPath("inventory"));
 
 class 'InventoryAddon' (BarAddon)
 
@@ -21,7 +27,7 @@ end
 
 function InventoryAddon:Load()
     
-	self.UIRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("InventoryAddon.layout", false);
+	self.UIRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("inventoryaddon.layout", "", "InventoryResources");
 	
 	-- Trigger an immediate update.
 	self:OnUpdateTimerTick();

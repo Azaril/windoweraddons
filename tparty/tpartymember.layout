@@ -1,0 +1,85 @@
+<?xml version="1.0" ?>
+<GUILayout>
+  <Window Type="DefaultWindow" Name="MemberRootWindow">
+    <Property Name="ClippedByParent" Value="False" />
+    <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+    <Property Name="UnifiedSize" Value="{{1,0},{0,30}}" />
+    
+    <Window Type="Windower/StaticText" Name="MemberNameText">
+      <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+      <Property Name="UnifiedSize" Value="{{0.35,0},{1,0}}" />
+      <Property Name="VertFormatting" Value="VertCentred" />
+      <Property Name="HorzFormatting" Value="LeftAligned" />
+    </Window>
+
+    <Window Type="DefaultWindow" Name="BarsGroupWindow">
+      <Property Name="UnifiedPosition" Value="{{0.35,0},{0,0}}" />
+      <Property Name="UnifiedSize" Value="{{0.65,0},{1.0,0}}" />
+
+      <Window Type="Windower/ProgressBar" Name="HPProgressBar">
+        <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+        <Property Name="UnifiedSize" Value="{{1,0},{0.333,0}}" />
+
+        <Window Type="Windower/StaticText" Name="HPPercentText">
+          <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+          <Property Name="UnifiedSize" Value="{{1,0},{1,0}}" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
+
+        <Window Type="Windower/StaticText" Name="HPText">
+          <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+          <Property Name="UnifiedSize" Value="{{1,0},{1,0}}" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+          <Property Name="Visible" Value="False" />
+        </Window>
+
+      </Window>
+
+      <Window Type="Windower/ProgressBar" Name="MPProgressBar">
+        <Property Name="UnifiedPosition" Value="{{0,0},{0.333,0}}" />
+        <Property Name="UnifiedSize" Value="{{1,0},{0.333,0}}" />
+
+        <Window Type="Windower/StaticText" Name="MPPercentText">
+          <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+          <Property Name="UnifiedSize" Value="{{1,0},{1,0}}" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
+
+        <Window Type="Windower/StaticText" Name="MPText">
+          <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+          <Property Name="UnifiedSize" Value="{{1,0},{1,0}}" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+          <Property Name="Visible" Value="False" />
+        </Window>
+
+      </Window>
+
+      <Window Type="Windower/ProgressBar" Name="TPProgressBar">
+        <Property Name="UnifiedPosition" Value="{{0,0},{0.666,0}}" />
+        <Property Name="UnifiedSize" Value="{{1,0},{0.333,0}}" />
+
+        <Window Type="Windower/StaticText" Name="TPPercentText">
+          <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+          <Property Name="UnifiedSize" Value="{{1,0},{1,0}}" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+        </Window>
+
+        <Window Type="Windower/StaticText" Name="TPText">
+          <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
+          <Property Name="UnifiedSize" Value="{{1,0},{1,0}}" />
+          <Property Name="VertFormatting" Value="VertCentred" />
+          <Property Name="HorzFormatting" Value="HorzCentred" />
+          <Property Name="Visible" Value="False" />
+        </Window>
+
+      </Window>
+
+    </Window>
+
+  </Window>
+</GUILayout>
