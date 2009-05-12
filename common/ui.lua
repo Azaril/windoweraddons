@@ -79,7 +79,7 @@ function RemoveTopWindow(Window)
 
     if(Window ~= nil) then
     
-        TopRootWindow:removeChildWindow(Window);
+        SafeRemoveDetachChildWindow(Window);
         
         for i, v in ipairs(TopWindow_WindowList) do
         
@@ -96,12 +96,6 @@ function RemoveTopWindow(Window)
         RearrangeTopWindow();
     
     end
-
-end
-
-function AddResourceGroupDirectory(ResourceGroup, Directory)
-
-    CFFXiHook.Instance():GetUIManager():AddResourceGroupDirectory(ResourceGroup, Directory);
 
 end
 

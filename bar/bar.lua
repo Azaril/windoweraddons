@@ -1,5 +1,4 @@
-require("common\\utility");
-require("common\\ui");
+require("common\\common");
 
 require("bar\\barresources")
 require("bar\\addonbar")

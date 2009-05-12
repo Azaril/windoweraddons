@@ -1,4 +1,4 @@
-require("common\\utility");
+require("common\\common");
 
 CallForHelp_AllowCallForHelp = true;
 

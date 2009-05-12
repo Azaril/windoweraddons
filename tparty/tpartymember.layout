@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <GUILayout>
-  <Window Type="DefaultWindow" Name="MemberRootWindow">
+  <Window Type="DefaultWindow">
     <Property Name="ClippedByParent" Value="False" />
     <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
     <Property Name="UnifiedSize" Value="{{1,0},{0,30}}" />

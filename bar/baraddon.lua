@@ -1,5 +1,4 @@
-require("common\\utility");
-require("common\\ui");
+require("common\\common");
 
 class 'BarAddon'
 

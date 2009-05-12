@@ -1,5 +1,4 @@
-require("common\\utility")
-require("common\\gameutility")
+require("common\\common")
 require("spellcast\\namespace")
 
 class 'SCEvent'

@@ -1,6 +1,6 @@
 <?xml version="1.0" ?>
 <GUILayout>
-  <Window Type="Windower/FrameWindow" Name="TPartyWindow">
+  <Window Type="Windower/FrameWindow">
     <Property Name="UnifiedPosition" Value="{{0,20},{0.1,0}}" />
     <Property Name="UnifiedSize" Value="{{0,200},{0,200}}" />
     <Property Name="FrameEnabled" Value="False"/>

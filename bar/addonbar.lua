@@ -1,6 +1,4 @@
-require("common\\utility");
-require("common\\ui");
-
+require("common\\common");
 require("bar\\barresources");
 
 BarAlignment_Left = 0;
@@ -17,6 +15,7 @@ function AddonBar:__init()
     self.NextIndex = 1;
 
 	self.BarRoot = CEGUI.WindowManager:getSingleton():loadWindowLayout("addonbar.layout", "", "AddonBarResources");
+	self.BarRoot:setDestroyedByParent(false);
 	
 	AddTopWindow(self.BarRoot, 1);
 	
@@ -24,8 +23,7 @@ end
 
 function AddonBar:__finalize()
 
-    --TODO: Fix cleanup.
-    --RemoveTopWindow(self.BarRoot);
+    RemoveTopWindow(self.BarRoot);
 
 end
 

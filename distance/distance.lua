@@ -1,7 +1,4 @@
-require("common\\utility");
-require("common\\gameutility");
-require("common\\ui");
-
+require("common\\common");
 require("bar\\bar");
 
 --

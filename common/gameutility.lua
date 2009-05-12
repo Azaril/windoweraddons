@@ -7,6 +7,12 @@ function GetPlayer()
 
 end
 
+function GetAlliancePlayer(Index)
+
+    return CFFXiHook.Instance():GetGameStateManager():GetAllianceMemberInformation(Index);
+
+end
+
 function GetItemStorage(StorageType)
 
     return CFFXiHook.Instance():GetGameStateManager():GetItemStorage(StorageType);
