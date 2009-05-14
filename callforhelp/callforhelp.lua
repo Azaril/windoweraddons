@@ -28,7 +28,7 @@ function CallForHelp_OnChatInput(Text)
 		return true;
 		
 	-- Check if the this is a call for help from the game.
-	elseif(Text:lower() == "/help") then
+	elseif(Text:lower() == "/help" or Text:lower() == "/h") then
 	
 	    -- Ignore the call for help if blocking is enabled.
         if(CallForHelp_AllowCallForHelp == false) then

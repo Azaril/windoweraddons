@@ -79,15 +79,12 @@ function TParty:OnAlliancePlayerAdded(Index, Player)
     PlayerInfo.MemberNameText = PlayerInfo.Window:getChildRecursive("MemberNameText");
     
     PlayerInfo.HPText = PlayerInfo.Window:getChildRecursive("HPText");
-    PlayerInfo.HPPercentText = PlayerInfo.Window:getChildRecursive("HPPercentText");
     PlayerInfo.HPProgressBar = CEGUI.toProgressBar(PlayerInfo.Window:getChildRecursive("HPProgressBar"));
     
     PlayerInfo.MPText = PlayerInfo.Window:getChildRecursive("MPText");
-    PlayerInfo.MPPercentText = PlayerInfo.Window:getChildRecursive("MPPercentText");
     PlayerInfo.MPProgressBar = CEGUI.toProgressBar(PlayerInfo.Window:getChildRecursive("MPProgressBar"));    
     
     PlayerInfo.TPText = PlayerInfo.Window:getChildRecursive("TPText");
-    PlayerInfo.TPPercentText = PlayerInfo.Window:getChildRecursive("TPPercentText");
     PlayerInfo.TPProgressBar = CEGUI.toProgressBar(PlayerInfo.Window:getChildRecursive("TPProgressBar"));    
     
     --
@@ -125,16 +122,13 @@ function TParty:OnUpdateTick()
     
         local Player = GetAlliancePlayer(Index - 1);
         
-        PlayerInfo.HPText:setText(string.format("%u", Player:GetHitPoints()));
-        PlayerInfo.HPPercentText:setText(string.format("%u%%", Player:GetHitPointPercentage()));
+        PlayerInfo.HPText:setText(string.format("%u - %u%%", Player:GetHitPoints(), Player:GetHitPointPercentage()));
         PlayerInfo.HPProgressBar:setProgress(Player:GetHitPointPercentage() / 100.0);
         
-        PlayerInfo.MPText:setText(string.format("%u", Player:GetMagicPoints()));
-        PlayerInfo.MPPercentText:setText(string.format("%u%%", Player:GetMagicPointPercentage()));
+        PlayerInfo.MPText:setText(string.format("%u - %u%%", Player:GetMagicPoints(), Player:GetMagicPointPercentage()));
         PlayerInfo.MPProgressBar:setProgress(Player:GetMagicPointPercentage() / 100.0);
         
-        PlayerInfo.TPText:setText(string.format("%u", Player:GetTechniquePoints()));
-        PlayerInfo.TPPercentText:setText(string.format("%u%%", Player:GetTechniquePointPercentage()));
+        PlayerInfo.TPText:setText(string.format("%u%%", Player:GetTechniquePoints()));
         PlayerInfo.TPProgressBar:setProgress(Player:GetTechniquePointPercentage() / 100.0);
     
     end

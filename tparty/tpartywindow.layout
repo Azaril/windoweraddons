@@ -2,22 +2,20 @@
 <GUILayout>
   <Window Type="Windower/FrameWindow">
     <Property Name="UnifiedPosition" Value="{{0,20},{0.1,0}}" />
-    <Property Name="UnifiedSize" Value="{{0,200},{0,200}}" />
+    <Property Name="UnifiedSize" Value="{{0,200},{0,0}}" />
     <Property Name="FrameEnabled" Value="False"/>
     <Property Name="TitlebarEnabled" Value="True"/>
     <Property Name="RollUpEnabled" Value="False"/>
     <Property Name="DragMovingEnabled" Value="True"/>
     <Property Name="CloseButtonEnabled" Value="False" />
     <Property Name="SizingEnabled" Value="False"/>
-    <Property Name="BackgroundEnabled" Value="False" />
-    <Property Name="ClientAreaColour" Value="00000000" />    
-
-    <Property Name="Text" Value="TParty" />
+    <Property Name="Text" Value="Party" />
+    <Property Name="Alpha" Value="0.7" />
 
     <Window Type="DefaultWindow" Name="TPartyPlayerDock">
       <Property Name="ClippedByParent" Value="False" />
-      <Property Name="UnifiedPosition" Value="{{0,10},{0,27}}" />
-      <Property Name="UnifiedSize" Value="{{1,-20},{0,0}}" />
+      <Property Name="UnifiedPosition" Value="{{0,0},{0,27}}" />
+      <Property Name="UnifiedSize" Value="{{1,0},{0,0}}" />
     </Window>
 
   </Window>
