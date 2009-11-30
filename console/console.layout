@@ -3,7 +3,7 @@
   <Window Type="Windower/FrameWindow" Name="Console">
     <Property Name="AlwaysOnTop" Value="True" />
     <Property Name="UnifiedPosition" Value="{{0,0},{0,0}}" />
-    <Property Name="UnifiedSize" Value="{{1,0},{0,200}}" />
+    <Property Name="UnifiedSize" Value="{{1,0},{0,350}}" />
     <Property Name="FrameEnabled" Value="False" />
     <Property Name="TitlebarEnabled" Value="False" />
     <Property Name="RollUpEnabled" Value="False" />

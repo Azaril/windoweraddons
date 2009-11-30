@@ -65,9 +65,10 @@ function DistanceAddon:OnUpdateTimerTick()
                 local DistanceToMob = GetDistanceToMob(Target);
                 
                 local TargetName = Target:GetName();
+				local HitPointPercentage = Target:GetHitPointPercentage();
                 
                 self.UIRoot:setText(
-                    string.format("%s - Distance: %.2f", (TargetName ~= "") and TargetName or "Unknown", DistanceToMob)
+                    string.format("%s - Distance: %.2f - %.0f%%", (TargetName ~= "") and TargetName or "Unknown", DistanceToMob, HitPointPercentage)
                 );
                 
                 GotTarget = true;
